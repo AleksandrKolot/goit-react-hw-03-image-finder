@@ -1,11 +1,9 @@
 import { Component } from 'react';
-
+import s from './App.module.css';
 import Searchbar from '../../components/Searchbar';
 import ImageGallery from '../../components/ImageGallery';
 import Button from '../../components/Button';
 import Modal from '../../components/Modal';
-
-import './App.css';
 
 import FetchService from '../../services/fetch-services';
 const fetchService = new FetchService();
@@ -92,7 +90,7 @@ class App extends Component {
     const isButtonVisible =
       images.length > 0 && fetchService.currentCount < totalImgs && !isLoading;
     return (
-      <div className="App">
+      <div className={s.App}>
         <Searchbar onSubmit={this.handlerSubmit} />
         <ImageGallery list={images} handlerItemClick={this.handlerItemClick} />
 
