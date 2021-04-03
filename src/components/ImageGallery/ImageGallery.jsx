@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import s from './ImageGallery.module.css';
 import PropTypes from 'prop-types';
-import './ImageGallery.css';
 import ImageGalleryItem from '../../components/ImageGalleryItem';
 
 class ImageGallery extends Component {
@@ -9,7 +9,7 @@ class ImageGallery extends Component {
   render() {
     const { list, handlerItemClick } = this.props;
     return (
-      <ul className="ImageGallery">
+      <ul className={s.ImageGallery}>
         {list.map((el, indx) => (
           <ImageGalleryItem
             key={el.key_id}

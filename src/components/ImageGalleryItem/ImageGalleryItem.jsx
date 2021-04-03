@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types';
-import './ImageGalleryItem.css';
+import s from './ImageGalleryItem.module.css';
 
 const ImageGalleryItem = ({ webformatURL, tags, id, handlerItemClick }) => {
   return (
     <li
-      className="ImageGalleryItem"
+      className={s.ImageGalleryItem}
       onClick={() => {
         handlerItemClick(id);
       }}
     >
-      <img src={webformatURL} alt={tags} className="ImageGalleryItem-image" />
+      <img src={webformatURL} alt={tags} className={s.ImageGalleryItemImage} />
     </li>
   );
 };

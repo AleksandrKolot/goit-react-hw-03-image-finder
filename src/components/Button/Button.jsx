@@ -1,6 +1,7 @@
 import { Component } from 'react';
+import s from './Button.module.css';
 import PropTypes from 'prop-types';
-import './Button.css';
+
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import Spinner from 'react-loader-spinner';
 
@@ -10,7 +11,7 @@ class Button extends Component {
     return (
       <button
         disabled={isOff}
-        className="Button"
+        className={s.Button}
         type="button"
         onClick={onClick}
       >
@@ -19,8 +20,8 @@ class Button extends Component {
           visible={isOff}
           type="ThreeDots"
           color="#FFF"
-          height={19}
-          width={69}
+          height={20}
+          width={70}
         />
       </button>
     );
